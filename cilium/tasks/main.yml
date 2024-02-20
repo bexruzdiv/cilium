@@ -17,11 +17,11 @@
     executable: /bin/bash
 - name: Generate random username
   set_fact:
-    username: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=8') }}"
+    cilium_hubble_username: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=8') }}"
 
 - name: Generate random password
   set_fact:
-    password: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=16') }}"
+    cilium_hubble_password: "{{ lookup('password', '/dev/null chars=ascii_letters,digits length=16') }}"
 
 - name: Set environment variables
   set_fact:
